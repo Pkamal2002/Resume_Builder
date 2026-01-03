@@ -1,7 +1,7 @@
 import { Sparkle } from 'lucide-react'
 import React from 'react'
 
-const ProfessionalSummaryForm = ({data, onchange, setResumeData}) => {
+const ProfessionalSummaryForm = ({data, onChange, setResumeData}) => {
   return (
     <div className=' space-x-4'>
         <div className=' flex items-center justify-between '>
@@ -19,7 +19,7 @@ const ProfessionalSummaryForm = ({data, onchange, setResumeData}) => {
             id=''
             name=''
             value={data|| ""}
-            onchange={(e) => onchange(e.target.value)}
+            onChange={(e) => onChange(e.target.value)}
             rows={7}
             placeholder='Write a compelling professional summary that highlights your key strength and career objectives....'
             className=' w-full p-3 mt-2 border text-sm border-gray-300 rounded-lg focus:ring focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors resize-none'
