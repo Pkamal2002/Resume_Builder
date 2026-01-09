@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+    const {user} = useSelector(state=>state.auth)
     const [menuOpen, setMenuOpen] = useState(false);
 
     const companiesLogo = [
@@ -30,17 +32,18 @@ const Hero = () => {
                 <div className="hidden md:flex gap-2">
                     <Link
                         to="/app?state=register"
-                        className="px-6 py-2 bg-green-500 hover:bg-green-700 rounded-full text-white transition active:scale-95"
+                        className="px-6 py-2 bg-green-500 hover:bg-green-700 rounded-full text-white transition active:scale-95" hidden={user}
                     >
                         Get started
                     </Link>
 
                     <Link
                         to="/app?state=login"
-                        className="px-6 py-2 border rounded-full text-slate-700 hover:bg-slate-50 transition active:scale-95"
+                        className="px-6 py-2 border rounded-full text-slate-700 hover:bg-slate-50 transition active:scale-95" hidden={user}
                     >
                         Login
                     </Link>
+                    <Link to= '/app' className=" hidden md:block px-8 py-2 bg-green-500 hover:bg-green-700 active:scale-95 transition-all rounded-full text-white" hidden={!user} >Dashboard</Link>
                 </div>
 
                 <button
