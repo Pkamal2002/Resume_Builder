@@ -202,7 +202,7 @@ const Dashboard = () => {
                 </p>
                 <div
                   onClick={(e) => e.stopPropagation()}
-                  className="absolute top-1 right-1 group-hover:flex items-center hidden"
+                  className="absolute top-1 right-1 group-hover:flex items-center flex "
                 >
                   <TrashIcon
                     onClick={() => deleteResume(resume._id)}
