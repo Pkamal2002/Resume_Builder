@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Vite Environment Variables (ensure sure API keys aren't pushed)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

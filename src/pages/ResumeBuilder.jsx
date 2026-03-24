@@ -1,10 +1,6 @@
-// import { toast } from 'react-toastify';
 import toast from "react-hot-toast";
-
-// import { toast } from 'react-toastify';
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { dummyResumeData } from "../assets/assets";
 
 import {
   ArrowLeftIcon,
@@ -153,7 +149,7 @@ const ResumeBuilder = () => {
           className="inline-flex gap-2 items-center text-slate-500 hover:text-slate-700 transition-all"
         >
           <ArrowLeftIcon className="size-4" />
-          Back to Dashboard
+          Back to Dashboard 
         </Link>
       </div>
 
@@ -251,7 +247,7 @@ const ResumeBuilder = () => {
 
                 {/* Future sections go here */}
               </div>
-              <button onClick={()=> {toast.promise(saveResume, {loading: 'Saving...'})}} className=" bg-linear-to-br from-green-100 to-green-200 ring-green-300 text-green-600 ring hover:ring-green-400 transition-all rounded-md px-6 py-2 mt-6 text-sm  ">
+              <button onClick={()=> {toast.promise(saveResume, {loading: 'Saving...'})}}  className=" bg-linear-to-br from-green-100 to-green-200 ring-green-300 text-green-600 ring hover:ring-green-400 transition-all rounded-md px-6 py-2 mt-6 text-sm  ">
                 Save Changes
               </button>
             </div>
